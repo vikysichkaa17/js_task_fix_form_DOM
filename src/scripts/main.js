@@ -6,6 +6,10 @@ for (const input of formInputs) {
   const fieldId = input.id;
   const fieldName = input.getAttribute('name');
 
+  if (!fieldId || !fieldName) {
+    continue;
+  }
+
   const label = document.createElement('label');
 
   label.className = 'field-label';
